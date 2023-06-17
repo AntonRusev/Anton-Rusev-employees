@@ -1,4 +1,5 @@
 import { FileUploader } from "./components/FileUploader/FileUploader";
+import { Table } from "./components/Table/Table";
 import { DataProvider } from "./contexts/DataContext";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
         <>
             <DataProvider>
                 <FileUploader />
+                <Table />
             </DataProvider>
         </>
     );

@@ -49,6 +49,8 @@ export const DataProvider = ({
 
     const dataContextValue = {
         fileHandler,
+        tableRows,
+        values
     };
 
     return (
