@@ -1,7 +1,12 @@
+import { FileUploader } from "./components/FileUploader/FileUploader";
+import { DataProvider } from "./contexts/DataContext";
+
 function App() {
     return (
         <>
-            <p>Employees</p>
+            <DataProvider>
+                <FileUploader />
+            </DataProvider>
         </>
     );
 };
