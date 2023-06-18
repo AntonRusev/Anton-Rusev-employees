@@ -20,7 +20,7 @@ export const DataProvider = ({
         // console.log('Values STATE:');
         // console.log(values);
         if (values) {
-            overlapChecker();
+            matchChecker();
         }
     }, [parsedData, tableRows, values]);
 
@@ -51,7 +51,7 @@ export const DataProvider = ({
         });
     };
 
-    const overlapChecker = () => {
+    const matchChecker = () => {
         for (let i = 0; i < values.length; i++) {
             let [empId, projectId, dateFrom, dateTo] = values[i];
 
@@ -74,20 +74,28 @@ export const DataProvider = ({
                     const comparedOne = new Date(dateFromCompare);
                     const comparedTwo = new Date(dateToCompare);
 
-                    if (comparedTwo >= dateOne || comparedOne <= dateTwo) {
-                        console.log('BINGO')
-                    }
+                    if (comparedTwo >= dateOne && comparedOne <= dateTwo) {
+                        const fromDate = (dateOne >= comparedOne ? dateOne : comparedOne);
+                        const toDate= (dateTwo <= comparedTwo ? dateTwo : comparedTwo);
+                        const days = daysCalculator(fromDate, toDate);
+                        console.log(days);
+                    };
 
-                    console.log(dateOne, dateTwo, comparedOne, comparedTwo);
+                    // console.log(dateOne, dateTwo, comparedOne, comparedTwo);
                 };
 
             };
         };
     };
 
-    const daysCalculator = (employeeOne, employeeTwo, projectId, ) => {
+    const overlapChecker = () => {
 
-    }
+    };
+
+    const daysCalculator = (fromDate, toDate) => {
+        const days = ( toDate.getTime() - fromDate.getTime()) / (1000 * 3600 * 24);
+        return days;
+    };
 
     const dataContextValue = {
         fileHandler,
