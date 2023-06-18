@@ -1,0 +1,39 @@
+.table {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.table tr {
+    display: flex;
+    justify-content: space-around;
+    align-items: space-evenly;
+    border: 2px solid #104373;
+    border-radius: 4px;
+    margin: 0.2rem 0.2rem;
+}
+
+.table .title-row {
+    background-color: #104373;
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    color: white;
+    font-style: italic;
+    text-shadow: 0 0 7px whitesmoke;
+}
+
+th,
+td {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #104373;
+    padding: 0.3rem;
+    margin: 0.1rem 0.2rem;
+    display: flex;
+    width: 24%;
+    justify-content: space-around;
+    align-items: space-evenly;
+}

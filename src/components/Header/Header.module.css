@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem;
+}
+
+.title {
+    font-size: 3rem;
+    padding: 1rem;
+    margin: 0;
+    color: #104373;
+    text-shadow: 0 0 7px #104373;
+}

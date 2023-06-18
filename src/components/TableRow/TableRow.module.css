@@ -1,0 +1,8 @@
+.regular:hover {
+    border: 2px solid white;
+}
+
+.regular:hover td {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
